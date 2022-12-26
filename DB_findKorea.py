@@ -5,7 +5,7 @@ client = MongoClient('mongodb://ser:ser@3.39.46.36', 27017)
 db = client.KoreaServer
 users = db.users
 Logs = db.Logs
-Deposit = db.Deposit
+Deposits = db.Deposit
 
 def print_Data():
     
@@ -37,12 +37,12 @@ def Make_Log(User_Name,AccountBalance):
 
 def Make_Deposit(User_Name,UNIX_Time,time,Deposit):
     
-    Deposit.insert_one({'name':User_Name,"UNIX_Time" : UNIX_Time,"time" : time,"Deposit" : Deposit})
+    Deposits.insert_one({'name':User_Name,"UNIX_Time" : UNIX_Time,"time" : time,"Deposit" : Deposit})
 
 def Find_Deposit(User_Name):
     
-    deposit = Deposit.find_one({'name':User_Name})
-    deposits = Deposit.find({'name':User_Name})
+    deposit = Deposits.find_one({'name':User_Name})
+    deposits = Deposits.find({'name':User_Name})
     text_List = []
     
     if deposit == None:
