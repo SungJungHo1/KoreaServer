@@ -18,12 +18,12 @@ def Find_Data(User_Name):
     user = users.find_one({'name':User_Name})
     
     if user == None:
-        return "2"
+        return 2
     else :
         if not user["OnOff"]:
-            return "3"
+            return 3
         else :
-            return "1"
+            return 1
 
 def in_Data(name,Upper_Name,AccountNumber,OnOff):
     
