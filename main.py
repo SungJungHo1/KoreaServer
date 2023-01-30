@@ -22,7 +22,7 @@ def mach_UserName(name):
     temp = name
     check_User = Find_Data(temp)
 
-    return str(check_User)
+    return check_User
 
 @app.get('/Log')
 def Call_Log(name,balance):

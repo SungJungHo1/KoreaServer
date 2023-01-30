@@ -71,8 +71,9 @@ if __name__ == "__main__":
     # test1.insert_one({'name':"sdsds"})
     # x = test1.find({})
     # for i in x:
-    print("asa")
-    # Make_Data("nonottlyy")
+    x = print_Data()
+    for i in x:
+        print(i)
     # Make_Log("nonottlyy",6666)
     # print(Find_AccountBalance("48093112"))
     # print(Find_Deposit("141046139"))
